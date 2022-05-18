@@ -1,30 +1,34 @@
 import React from "react";
+import {FontAwesome , Feather, Entypo} from '@expo/vector-icons';
 import {
-  AuthorContent, 
-  AuthorImage, 
   AuthorName, 
   Container, 
   QuoteMarkLeft,
   QuoteMarkRight,
-  QuoteText
+  QuoteText,
+  ButtonsContainer,
+  IconFeather,
+  IconEntypo,
+  IconFontAwesome,
 } from "./styles";
 
-const quoteLefImg = require('../../../assets/left-quote.png')
-const quoteRightImg = require('../../../assets/right-quote.png')
-const authorImg = require('../../../assets/clarice_lispector.jpg')
+import quoteLefImg from '../../../assets/left-quote.png';
+import quoteRightImg from '../../../assets/right-quote.png';
 
 export function Quote(){
   return(
     <Container>
       <QuoteMarkLeft source={quoteLefImg}></QuoteMarkLeft>
       <QuoteText>Que ninguém se engane, só se consegue a simplicidade através de muito trabalho.</QuoteText>
-
-      <AuthorContent>
-        <AuthorImage source={authorImg}></AuthorImage>
-        <AuthorName>Clarice Lispector</AuthorName>
-      </AuthorContent>
-
+      <AuthorName>Clarice Lispector</AuthorName>
       <QuoteMarkRight source={quoteRightImg}></QuoteMarkRight>
+
+      <ButtonsContainer>
+        <IconFeather name="heart"/>
+        <IconEntypo name="share"/>
+        <IconFontAwesome name="exchange"/>
+      </ButtonsContainer>
     </Container>
+    
   );
 }

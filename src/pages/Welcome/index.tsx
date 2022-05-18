@@ -4,10 +4,15 @@ import {
   LogoContent, 
   LogoImage, 
   TitleImage,
-  WelcomeSubtitle
+  WelcomeSubtitle,
+  SignIn
 } from './styles';
 
-const LogoImg = require('../../../assets/logo.png');
+import LogoImg from '../../../assets/logo.png';
+import AppleSvg from '../../../assets/Apple Logo.svg';
+import GoogleSvg from '../../../assets/Google Logo.svg';
+
+import {SignInSocialButton} from '../../pages/SignInSocialButton';
 
 export function Welcome(){
   return(
@@ -17,6 +22,18 @@ export function Welcome(){
         <TitleImage>Quote</TitleImage>
       </LogoContent>
       <WelcomeSubtitle>Tenha sempre as melhores citações e reflexões em seu celular diariamente.</WelcomeSubtitle>
+      <SignIn>
+        <SignInSocialButton
+          title='Entrar com Google'
+          svg={GoogleSvg}
+        />
+        <SignInSocialButton
+          title='Entrar com Apple'
+          svg={AppleSvg}
+        />
+      </SignIn>
     </Container>
+
+    
   );
 }

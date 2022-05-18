@@ -1,4 +1,6 @@
 import styled from "styled-components/native";
+import {Feather, FontAwesome, Entypo} from '@expo/vector-icons';
+
 
 export const Container = styled.View`
   flex: 1;
@@ -26,21 +28,32 @@ export const QuoteText = styled.Text`
   padding: 16px;
 `;
 
-export const AuthorContent = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const AuthorImage = styled.Image`
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  margin-right: 150px;
-  margin-left: 20px;
-`;
-
 export const AuthorName = styled.Text`
   font-size: 12px;
   font-family: ${({theme}) => theme.fonts.regular};
   color: ${({theme}) => theme.colors.text};
+  align-self: flex-end;
+  margin-right: 25px;
+  margin-bottom: 10px;
+`;
+
+export const IconFeather = styled(Feather)`
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.text};
+`;
+export const IconEntypo = styled(Entypo)`
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.text};
+`;
+export const IconFontAwesome = styled(FontAwesome)`
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+export const ButtonsContainer = styled.View`
+  margin-top: 50px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 100px;
+  justify-content: space-between;  
 `;

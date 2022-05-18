@@ -31,5 +31,7 @@ export const WelcomeSubtitle = styled.Text`
   margin-bottom: 174px;
 `;
 
-export const LoginGoogleButton = styled.Button``;
-export const LoginAppleButton = styled.Button``;
+export const SignIn = styled.View`
+  /* margin-top: 174px;
+  justify-content: space-between; */
+`;
