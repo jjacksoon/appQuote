@@ -2,6 +2,7 @@ import React from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from 'styled-components';
 import { Welcome } from './src/pages/Welcome';
+import { Quote } from './src/pages/Quote';
 import theme from './src/global/styles/theme';
 
 import {
@@ -26,7 +27,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Welcome/>
+      {/* <Welcome/> */}
+      <Quote/>
     </ThemeProvider>
   );
 }
