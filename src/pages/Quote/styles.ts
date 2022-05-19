@@ -37,10 +37,17 @@ export const AuthorName = styled.Text`
   margin-bottom: 10px;
 `;
 
-export const IconFeather = styled(Feather)`
-  font-size: 24px;
-  color: ${({ theme }) => theme.colors.text};
+export const IconBorder = styled.TouchableOpacity`
+  border-width: 2px;
+  border-color: ${({ theme }) => theme.colors.text};
+  border-radius: 50px;
+  padding: 5px;
 `;
+
+// export const IconFeather = styled(Feather)`
+//   font-size: 24px;
+//   color: ${({ theme }) => theme.colors.text};
+// `;
 export const IconEntypo = styled(Entypo)`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.text};
@@ -51,9 +58,9 @@ export const IconFontAwesome = styled(FontAwesome)`
 `;
 
 export const ButtonsContainer = styled.View`
-  margin-top: 50px;
+  margin-top: 20px;
   flex-direction: row;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 80px;
   justify-content: space-between;  
 `;

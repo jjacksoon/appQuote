@@ -33,5 +33,5 @@ export const WelcomeSubtitle = styled.Text`
 
 export const SignIn = styled.View`
   width: 100%;
-  height: 30%;
+  margin-top: -50px;
 `;
