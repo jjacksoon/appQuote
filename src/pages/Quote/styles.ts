@@ -44,14 +44,6 @@ export const IconBorder = styled.TouchableOpacity`
   padding: 5px;
 `;
 
-// export const IconFeather = styled(Feather)`
-//   font-size: 24px;
-//   color: ${({ theme }) => theme.colors.text};
-// `;
-export const IconEntypo = styled(Entypo)`
-  font-size: 24px;
-  color: ${({ theme }) => theme.colors.text};
-`;
 export const IconFontAwesome = styled(FontAwesome)`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.text};
@@ -61,6 +53,6 @@ export const ButtonsContainer = styled.View`
   margin-top: 20px;
   flex-direction: row;
   align-items: center;
-  padding: 0 80px;
+  padding: 0 120px;
   justify-content: space-between;  
 `;

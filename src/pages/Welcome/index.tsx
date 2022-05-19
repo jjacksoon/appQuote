@@ -13,10 +13,12 @@ import AppleSvg from '../../../assets/Apple.svg';
 import GoogleSvg from '../../../assets/Google.svg';
 
 import {SignInSocialButton} from '../../pages/SignInSocialButton';
+import { StatusBar } from 'expo-status-bar';
 
 export function Welcome(){
   return(
     <Container>
+      <StatusBar style="light"/>
       <LogoContent>
         <LogoImage source={LogoImg}></LogoImage>
         <TitleImage>Quote</TitleImage>
