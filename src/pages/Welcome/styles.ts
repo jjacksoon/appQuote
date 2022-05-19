@@ -32,6 +32,6 @@ export const WelcomeSubtitle = styled.Text`
 `;
 
 export const SignIn = styled.View`
-  /* margin-top: 174px;
-  justify-content: space-between; */
+  width: 100%;
+  height: 30%;
 `;

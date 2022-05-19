@@ -5,6 +5,7 @@ export default{
 
     secondary: "#34BCE5",
     text: "#F5F5F5",
+    text_login_button: "#6B6B6B"
 
   },
 

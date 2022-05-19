@@ -9,8 +9,8 @@ import {
 } from './styles';
 
 import LogoImg from '../../../assets/logo.png';
-import AppleSvg from '../../../assets/Apple Logo.svg';
-import GoogleSvg from '../../../assets/Google Logo.svg';
+import AppleSvg from '../../../assets/Apple.svg';
+import GoogleSvg from '../../../assets/Google.svg';
 
 import {SignInSocialButton} from '../../pages/SignInSocialButton';
 
