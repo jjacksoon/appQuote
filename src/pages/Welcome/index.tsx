@@ -11,14 +11,14 @@ import {
 import LogoImg from '../../../assets/logo.png';
 import AppleSvg from '../../../assets/Apple.svg';
 import GoogleSvg from '../../../assets/Google.svg';
-import {AuthContext} from '../../../src/AuthContext';
+import {useAuth} from '../../hooks/auth';
 
 import {SignInSocialButton} from '../../pages/SignInSocialButton';
 import { StatusBar } from 'expo-status-bar';
 
 export function Welcome(){
-  const data = useContext(AuthContext);
-  console.log(data);
+  const {user} = useAuth();
+  console.log(user);
   return(
     <Container>
       <StatusBar style="light"/>
