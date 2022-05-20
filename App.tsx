@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Welcome } from './src/pages/Welcome';
 import { Quote } from './src/pages/Quote';
 import theme from './src/global/styles/theme';
-
+import {AuthContext} from './src/AuthContext';
 import {
   useFonts,
   Poppins_400Regular,
@@ -27,8 +27,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <Welcome/> */}
-      <Quote/>
+      <AuthContext.Provider value={[]}>
+        <Welcome/>
+      </AuthContext.Provider>
+
+      {/* <Quote/> */}
     </ThemeProvider>
   );
 }

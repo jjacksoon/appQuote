@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   Container, 
   LogoContent, 
@@ -11,11 +11,14 @@ import {
 import LogoImg from '../../../assets/logo.png';
 import AppleSvg from '../../../assets/Apple.svg';
 import GoogleSvg from '../../../assets/Google.svg';
+import {AuthContext} from '../../../src/AuthContext';
 
 import {SignInSocialButton} from '../../pages/SignInSocialButton';
 import { StatusBar } from 'expo-status-bar';
 
 export function Welcome(){
+  const data = useContext(AuthContext);
+  console.log(data);
   return(
     <Container>
       <StatusBar style="light"/>
