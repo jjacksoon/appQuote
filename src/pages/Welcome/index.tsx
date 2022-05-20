@@ -1,4 +1,3 @@
-import React, {useContext} from 'react';
 import {
   Container, 
   LogoContent, 
@@ -11,14 +10,17 @@ import {
 import LogoImg from '../../../assets/logo.png';
 import AppleSvg from '../../../assets/Apple.svg';
 import GoogleSvg from '../../../assets/Google.svg';
-import {useAuth} from '../../hooks/auth';
 
 import {SignInSocialButton} from '../../pages/SignInSocialButton';
 import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
+
+type Nav = {
+  navigate: (value: string) => void;
+}
 
 export function Welcome(){
-  const {user} = useAuth();
-  console.log(user);
+  const navigation = useNavigation<Nav>();
   return(
     <Container>
       <StatusBar style="light"/>
@@ -31,6 +33,7 @@ export function Welcome(){
         <SignInSocialButton
           title='Entrar com Google'
           svg={GoogleSvg}
+          onPress={() => navigation.navigate("Quote")}
         />
         <SignInSocialButton
           title='Entrar com Apple'

@@ -4,13 +4,15 @@ import { ThemeProvider } from 'styled-components';
 import { Welcome } from './src/pages/Welcome';
 import { Quote } from './src/pages/Quote';
 import theme from './src/global/styles/theme';
-import {AuthProvider} from './src/hooks/auth';
 import {
   useFonts,
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold
 } from '@expo-google-fonts/poppins';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { Approutes } from './src/routes/app.routes';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -26,13 +28,14 @@ export default function App() {
   SplashScreen.hideAsync();
 
   return (
-    <ThemeProvider theme={theme}>
-      <AuthProvider>
-        <Welcome/>
-      </AuthProvider>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer>
+          <Approutes/>
+        </NavigationContainer>
+      </ThemeProvider>
 
-      {/* <Quote/> */}
-    </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }
 
